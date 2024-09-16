@@ -9,11 +9,11 @@ export default $config({
     };
   },
   async run() {
-    await import("./infra/storage");
+    // await import("./infra/storage");
     const api = await import("./infra/api");
 
     return {
-      api: api.myApi.url,
+      api: api.hono.url,
     };
   },
 });

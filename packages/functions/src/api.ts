@@ -1,10 +1,13 @@
-import { Resource } from "sst";
-import { Handler } from "aws-lambda";
-import { Example } from "@sst-test-app/core/example";
+// import { Resource } from "sst";
+// import { Handler } from "aws-lambda";
+// import { Example } from "@sst-test-app/core/example";
+import { Hono } from 'hono';
+import { handle } from "hono/aws-lambda";
 
-export const handler: Handler = async (_event) => {
-  return {
-    statusCode: 200,
-    body: `${Example.hello()} Linked to ${Resource.MyBucket.name}.`,
-  };
-};
+const app = new Hono()
+  .get("/", async (c) => {
+
+    return c.text('Hello lambda!');
+  });
+
+export const handler = handle(app);
