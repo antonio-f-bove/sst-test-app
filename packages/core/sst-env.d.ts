@@ -10,5 +10,13 @@ declare module "sst" {
       "type": "sst.aws.Function"
       "url": string
     }
+    "TursoAuthToken": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
+    "TursoDatabaseUrl": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
   }
 }
