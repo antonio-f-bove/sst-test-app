@@ -11,9 +11,11 @@ export default $config({
   async run() {
     await import("./infra/storage");
     const api = await import("./infra/api");
+    const frontend = await import('./infra/frontend');
 
     return {
       api: api.hono.url,
+      frontend: frontend.angular.nodes,
     };
   },
 });
