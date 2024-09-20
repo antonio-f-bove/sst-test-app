@@ -15,7 +15,7 @@ export default $config({
 
     return {
       api: api.hono.url,
-      frontend: frontend.angular.nodes,
+      frontend: frontend.angular.url,
     };
   },
 });
