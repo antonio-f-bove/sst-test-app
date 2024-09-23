@@ -5,18 +5,9 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
-    "Angular": {
-      "type": "sst.aws.StaticSite"
-      "url": string
-    }
-    "Hono": {
-      "name": string
-      "type": "sst.aws.Function"
-      "url": string
-    }
     "TursoAuthToken": {
       "type": "sst.sst.Secret"
-      "value": string
+      "value": any
     }
     "TursoDatabaseUrl": {
       "type": "sst.sst.Secret"
